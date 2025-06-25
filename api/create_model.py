@@ -1,4 +1,4 @@
-from model import Model, EncoderType
+from model.classifier import Model, EncoderType
 import pandas as pd
 
 obesity_classifier = Model(
@@ -41,4 +41,4 @@ test_df = pd.DataFrame(
 )
 print(obesity_classifier.predict(test_df))
 
-obesity_classifier.save("./model/model.pkl")
+obesity_classifier.save("./model/model_bundle.pkl")

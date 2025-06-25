@@ -101,7 +101,6 @@ class Model:
             new_df = pd.concat([
                 new_df,
                 encoded_col
-                # pd.DataFrame(self.encoders[k].fit_transform(self.df[[colname]]), columns=[colname], index=self.df.index),
             ], axis=1)
 
         self.encoded_df = new_df
@@ -131,7 +130,6 @@ class Model:
                         )
                 case _:
                     encoded_col = self.encoders[k].transform(values[[k]])
-
 
             pred_df = pd.concat([
                 pred_df,
